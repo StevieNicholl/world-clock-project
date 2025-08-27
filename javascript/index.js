@@ -20,6 +20,11 @@ cityArray.push({
 });
 
 let selectData = {
+  current: {
+    city_tag: "current",
+    city: "My Location",
+    time_zone: moment.tz.guess(),
+  },
   london: {
     city_tag: "london",
     city: "London",
@@ -68,9 +73,9 @@ function updateTime() {
 
 function selectNewCity(event) {
   newCity = event.target.value;
+  cityArray = [];
+  citiesData.innerHTML = "";
   if (newCity !== "") {
-    cityArray = [];
-    citiesData.innerHTML = "";
     createCityBlock(selectData[newCity]);
     cityArray.push(selectData[newCity]);
     updateTime();
