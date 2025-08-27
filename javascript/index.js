@@ -19,6 +19,12 @@ cityArray.push({
   time_zone: "Europe/Paris",
 });
 
+cityArray.push({
+  city_tag: "tokyo",
+  city: "Tokyo",
+  time_zone: "Asia/Tokyo",
+});
+
 let selectData = {
   current: {
     city_tag: "current",
@@ -73,9 +79,10 @@ function updateTime() {
 
 function selectNewCity(event) {
   newCity = event.target.value;
-  cityArray = [];
-  citiesData.innerHTML = "";
+
   if (newCity !== "") {
+    cityArray = [];
+    citiesData.innerHTML = "";
     createCityBlock(selectData[newCity]);
     cityArray.push(selectData[newCity]);
     updateTime();
