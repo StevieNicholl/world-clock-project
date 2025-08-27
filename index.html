@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>World Clock - Stevie Nicholl</title>
   </head>
   <body>
-    <h1>World Clock</h1>
+    <div class="container">
+      <h1>World Clocks</h1>
+      <select name="cities" id="cities">
+        <option value="">Select a city...</option>
+        <option value="">London</option>
+        <option value="">New York</option>
+        <option value="">Auckland</option>
+      </select>
+      <div class="city">
+        <h2>Los Angeles</h2>
+        <div class="date">date</div>
+        <div class="time">time</div>
+      </div>
+    </div>
     <footer>
       This project was code by Stevie Nicholl and is
       <a href=""> open sourced on GitHub</a>
     </footer>
+    <script src="javascript/index.js"></script>
   </body>
 </html>
